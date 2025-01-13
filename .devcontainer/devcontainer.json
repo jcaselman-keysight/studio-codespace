@@ -1,0 +1,15 @@
+{
+    "image": "quay.io/eggplantsoftware/fusion-engine-ubi8:23.5.101",
+    "containerEnv": {
+        "EPF_LICENSE_KEY": "${localEnv:EPF_LICENSE_KEY}"
+    },
+    "postCreateCommand": "defaults write Eggplant AcceptPrivacyAgreement YES && defaults write Eggplant AcceptEULA YES && runscript -LicenseKey $EPF_LICENSE_KEY",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "keysight-technologies.eggplantteststudio"
+            ]
+        }
+    }
+    
+}
