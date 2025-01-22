@@ -1,9 +1,10 @@
 {
-    "image": "quay.io/eggplantsoftware/fusion-engine-ubi8:23.5.101",
+    // "image": "quay.io/eggplantsoftware/fusion-engine-ubi8:23.5.101",
+    "image": "ubuntu:22.04",
     "containerEnv": {
         "EPF_LICENSE_KEY": "${localEnv:EPF_LICENSE_KEY}"
     },
-    "postCreateCommand": "defaults write Eggplant AcceptPrivacyAgreement YES && defaults write Eggplant AcceptEULA YES && runscript -LicenseKey $EPF_LICENSE_KEY",
+    // "postCreateCommand": "defaults write Eggplant AcceptPrivacyAgreement YES && defaults write Eggplant AcceptEULA YES && runscript -LicenseKey $EPF_LICENSE_KEY",
     "customizations": {
         "vscode": {
             "extensions": [
